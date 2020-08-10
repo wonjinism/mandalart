@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
 
 
-    let items = document.querySelectorAll('.container .element');
+    let items = document.querySelectorAll('.element .inner-element');
     items.forEach(function(item) {
         item.addEventListener('dragstart', handleDragStart, false);
         item.addEventListener('dragenter', handleDragEnter, false);
@@ -60,4 +60,32 @@ document.addEventListener('DOMContentLoaded', (event) => {
         item.addEventListener('drop', handleDrop, false);
         item.addEventListener('dragend', handleDragEnd, false);
     });
+
+
+
+    let modal = document.querySelector()
+
 });
+
+
+
+
+
+var url = "/elements/";
+
+fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+        userId: 1,
+        id: 101,
+        title: 'test content',
+        completed: false,
+    }),
+})
+    .then((res) => {
+        return res.json();
+    })
+    .then((data) => {
+        console.log(data);
+    });
