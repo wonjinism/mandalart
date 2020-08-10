@@ -1,0 +1,44 @@
+html, body {
+    height: 100%;
+}
+
+.selector-for-some-widget {
+    box-sizing: content-box;
+}
+
+.canvas-grid {
+    display: flex;                       /* establish flex container */
+    flex-wrap: wrap;                     /* enable flex items to wrap */
+    justify-content: space-around;
+}
+
+.canvas-cell {
+    flex: 0 0 32%;                       /* don't grow, don't shrink, width */
+    height: 50px;
+    margin-bottom: 5px;
+}
+
+.super-element {
+    background-color: #999;
+    border: 3px solid #666;
+    background-color: #ddd;
+    border-radius: .5em;
+    padding: 10px;
+}
+
+.element {
+    border: 3px solid #666;
+    background-color: #ddd;
+    border-radius: .5em;
+    padding: 10px;
+    cursor: move;
+}
+
+.element.over {
+    border: 3px dashed #666;
+    background-color: #eee;
+}
+
+[draggable] {
+    user-select: none;
+}
