@@ -1,0 +1,43 @@
+.inner-canvas-grid {
+    index: 1;
+    background-color: blue;
+    display: flex;                       /* establish flex container */
+    flex: 0 0 32%;
+    flex-wrap: wrap;                     /* enable flex items to wrap */
+    justify-content: space-around;
+    align-item: center;
+    margin-bottom: 5px;
+}
+
+.inner-canvas-cell {
+    flex: 0 0 32%;                       /* don't grow, don't shrink, width */
+    display: flex;
+    margin-bottom: 5px;
+}
+.inner-canvas-cell:before {
+    content: '';
+    display: block;
+    padding-top:100%;
+}
+
+.inner-super-element {
+    background-color: #999;
+    border: 3px solid #666;
+    background-color: #fff;
+    border-radius: .5em;
+    /*padding: 10px;*/
+}
+
+.inner-element {
+    border: 3px solid #666;
+    background-color: #ddd;
+    border-radius: .5em;
+    /*padding: 10px;*/
+    cursor: move;
+}
+
+.inner-element.over {
+    border: 3px dashed #666;
+    background-color: #eee;
+}
+
